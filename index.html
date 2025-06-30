@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureGuard Pro - Professional Security Services</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/lib/index.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- React and ReactDOM -->
+    <script crossorigin src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+    <script crossorigin src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    
+    <!-- Babel for JSX -->
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.22.0/babel.min.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.1/dist/umd/lucide.js"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Michroma&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+
+   <style>
+        /* Custom animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        .animate-delay-100 {
+            animation-delay: 0.1s;
+        }
+        
+        .animate-delay-200 {
+            animation-delay: 0.2s;
+        }
+        
+        .animate-delay-300 {
+            animation-delay: 0.3s;
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom gradient */
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        }
+        
+        /* Sidebar transition */
+        .sidebar-transition {
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        /* Mobile sidebar overlay */
+        .sidebar-overlay {
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-white">
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" class="sidebar">
+        <div class="sidebar-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Gurkha Securities</h1>
+                </div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link active" data-section="hero">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="about.html" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About Us</span>
+                </a></li>
+                <li><a href="services.html" class="nav-link">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Services</span>
+                </a></li>
+                <li><a href="leadership.html" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <span>Leadership</span>
+                </a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">
+                    <i class="fas fa-phone"></i>
+                    <span>Contact</span>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sidebar Overlay -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-background"></div>
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title animate-fade-in-up">
+                         <span class="text-blue">Gurkha</span> Securities
+                    </h1>
+                    <p class="hero-subtitle animate-fade-in-up delay-100">
+                        Protecting what matters most with cutting-edge surveillance, access control, and cybersecurity solutions.
+                    </p>
+                    <div class="hero-buttons animate-fade-in-up delay-200">
+                        <button class="btn btn-primary" onclick="scrollToSection('contact')">
+                            <p style="font-family: 'Orbitron';">Get Free Consultation</p>
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <a href="services.html" class="btn btn-outline">Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview Section -->
+        <section id="services" class="services-section">
+            <div class="hero2-background"></div>
+
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="orbitron">Our Security Services</h2>
+                    <p>Comprehensive security solutions tailored to protect your business, property, and digital assets.</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <div class="service-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="orbitron">Surveillance Systems</h3>
+                            <p>Advanced CCTV and monitoring solutions with 24/7 remote access and AI-powered analytics.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> HD/4K Cameras</li>
+                                <li><i class="fas fa-check"></i> Night Vision</li>
+                                <li><i class="fas fa-check"></i> Motion Detection</li>
+                                <li class="more-features">+ 1 more features</li>
+                            </ul>
+                            <a href="services.html" class="service-link">
+                                Learn More <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <div class="service-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="orbitron">Access Control</h3>
+                            <p>Secure entry systems including biometric scanners, key cards, and smart locks.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Biometric Access</li>
+                                <li><i class="fas fa-check"></i> Key Card Systems</li>
+                                <li><i class="fas fa-check"></i> Smart Locks</li>
+                                <li class="more-features">+ 1 more features</li>
+                            </ul>
+                            <a href="services.html" class="service-link">
+                                Learn More <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <div class="service-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="orbitron">Cybersecurity</h3>
+                            <p>Comprehensive digital protection including network security and threat monitoring.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Network Security</li>
+                                <li><i class="fas fa-check"></i> Threat Detection</li>
+                                <li><i class="fas fa-check"></i> Data Protection</li>
+                                <li class="more-features">+ 1 more features</li>
+                            </ul>
+                            <a href="services.html" class="service-link">
+                                Learn More <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-cta orbitron">
+                    <a href="services.html" class="btn btn-primary">
+                        View All Services
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="hero2-background"></div>
+
+            <div class="container">
+                
+                <div class="section-header">
+                    <h2 class="orbitron">Get In Touch</h2>
+                    <p>Ready to secure your business? Contact us for a free consultation and custom security solution.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-image">
+                            <div class="placeholder-image">
+                                <i class="fas fa-building"></i>
+                                <p>Our 24/7 Security Operations Center</p>
+                            </div>
+                        </div>
+                        <h3 class="orbitron">Contact Information</h3>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <p class="contact-label">Phone</p>
+                                    <p class="contact-value">+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <p class="contact-label">Email</p>
+                                    <p class="contact-value">info@secureguardpro.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <p class="contact-label">Address</p>
+                                    <p class="contact-value">123 Security Blvd, Suite 100<br>Business District, NY 10001</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <p class="contact-label">Hours</p>
+                                    <p class="contact-value">24/7 Emergency Support<br>Mon-Fri 8AM-6PM (Office)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <h3 class="orbitron">Request Consultation</h3>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Full Name *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Email Address *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="company" name="company" placeholder="Company Name">
+                            </div>
+                            <div class="form-group">
+                                <select id="service" name="service">
+                                    <option value="">Select Service</option>
+                                    <option value="surveillance">Surveillance Systems</option>
+                                    <option value="access-control">Access Control</option>
+                                    <option value="cybersecurity">Cybersecurity</option>
+                                    <option value="consultation">General Consultation</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Tell us about your security needs... *" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full orbitron">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Gurkha Securities</h3>
+                    </div>
+                    <p class="footer-tagline">Professional Security Services You Can Trust</p>
+                    <p class="footer-copyright">© 2024 SecureGuard Pro. All rights reserved. | Licensed & Insured Security Services</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
