@@ -176,7 +176,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  /* background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); */
   position: relative;
   overflow: hidden;
 }
@@ -222,7 +222,7 @@ body {
 }
 
 .hero-title {
-  font-size: 4rem;
+  font-size: 6rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
   line-height: normal;
@@ -318,7 +318,7 @@ body {
 .services-section {
   padding: 5rem 0;
   position: relative;
-  background-color: #1e293b;
+  /* background-color: #1e293b; */
 }
 
 .section-header {
@@ -448,7 +448,7 @@ body {
 /* Contact Section */
 .contact-section {
   padding: 5rem 0;
-  background-color: #0f172a;
+  /* background-color: #0f172a; */
   position: relative;
 }
 
@@ -472,7 +472,7 @@ body {
 }
 
 .placeholder-image {
-  height: 12rem;
+  height: 32rem;
   background-color: #1e293b;
   border: 1px solid #334155;
   border-radius: 0.5rem;
@@ -610,7 +610,7 @@ body {
 /* Page Hero */
 .page-hero {
   padding: 8rem 0 5rem;
-  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  /* background: linear-gradient(135deg, #1e293b 0%, #334155 100%); */
 }
 
 .page-hero-content {
@@ -633,7 +633,7 @@ body {
 /* About Page Styles */
 .about-story {
   padding: 5rem 0;
-  background-color: #1e293b;
+  /* background-color: #1e293b; */
 }
 
 .story-content {
@@ -681,7 +681,7 @@ body {
 
 .mission-vision {
   padding: 5rem 0;
-  background-color: #0f172a;
+  /* background-color: #0f172a; */
   position: relative;
 }
 
@@ -732,7 +732,7 @@ body {
 
 .core-values {
   padding: 5rem 0;
-  background-color: #1e293b;
+  /* background-color: #1e293b; */
   position: relative;
 }
 
@@ -775,7 +775,7 @@ body {
 
 .company-stats {
   padding: 4rem 0;
-  background-color: #1e293b;
+  /* background-color: #1e293b; */
   position: relative;
 }
 
@@ -804,7 +804,7 @@ body {
 /* Services Page Styles */
 .detailed-services {
   padding: 5rem 0;
-  background-color: #1e293b;
+  /* background-color: #1e293b; */
 }
 
 .service-detail {
@@ -897,7 +897,7 @@ body {
 
 .additional-services {
   padding: 5rem 0;
-  background-color: #0f172a;
+  /* background-color: #0f172a; */
 }
 
 .additional-services-grid {
@@ -931,7 +931,7 @@ body {
 
 .service-process {
   padding: 5rem 0;
-  background-color: #1e293b;
+  /* background-color: #1e293b; */
 }
 
 .process-grid {
@@ -1008,7 +1008,7 @@ body {
 /* Leadership Page Styles */
 .executive-team {
   padding: 5rem 0;
-  background-color: #1e293b;
+  /* background-color: #1e293b; */
 }
 
 .section-title-with-icon {
@@ -1101,7 +1101,7 @@ body {
 
 .board-directors {
   padding: 5rem 0;
-  background-color: #0f172a;
+  /* background-color: #0f172a; */
 }
 
 .board-grid {
@@ -1150,7 +1150,7 @@ body {
 
 .advisory-board {
   padding: 5rem 0;
-  background-color: #1e293b;
+  /* background-color: #1e293b; */
 }
 
 .advisory-grid {
@@ -1199,7 +1199,7 @@ body {
 
 .leadership-philosophy {
   padding: 5rem 0;
-  background-color: #0f172a;
+  /* background-color: #0f172a; */
 }
 
 .philosophy-content {
