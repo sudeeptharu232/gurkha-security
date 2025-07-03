@@ -235,7 +235,7 @@ body {
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: #e2e8f0;
   margin-bottom: 2rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -250,6 +250,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+.font-size{
+  font-size: medium;
+}
 
 .text-blue {
   color: #60a5fa;
@@ -263,7 +266,7 @@ body {
   gap: 0.5rem;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
-  font-size: 1.125rem;
+  font-size: normal;
   font-weight: 600;
   text-decoration: none;
   border: none;
@@ -327,18 +330,20 @@ body {
 }
 
 .section-header h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
 }
 
 .section-header p {
-  font-size: 1.25rem;
+  font-size: medium;
   color: #cbd5e1;
   max-width: 48rem;
   margin: 0 auto;
 }
-
+.bright-color{
+  color: #c43636;
+}
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -461,6 +466,7 @@ body {
 .contact-info h3 {
   font-size: 1.5rem;
   font-weight: bold;
+  color: #f1f5f9;
   margin-bottom: 1.5rem;
 }
 
@@ -504,9 +510,19 @@ body {
   align-items: flex-start;
   gap: 1rem;
 }
+.contact-item2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
 
 .contact-item i {
   color: #60a5fa;
+  font-size: 1.5rem;
+  margin-top: 0.25rem;
+}
+.contact-item2 i {
+  color: #c43636;
   font-size: 1.5rem;
   margin-top: 0.25rem;
 }
@@ -550,6 +566,7 @@ body {
   border-radius: 0.5rem;
   color: white;
   font-size: 1rem;
+  font-family: 'poppins';
 }
 
 .form-group input::placeholder,
@@ -574,6 +591,8 @@ body {
   background-color: #000;
   border-top: 1px solid #334155;
   padding: 3rem 0;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-content {
@@ -620,13 +639,14 @@ body {
 }
 
 .page-hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
 }
 
 .page-hero-content p {
-  font-size: 1.25rem;
+  /* font-size: 1.25rem; */
+  font-size: medium;
   color: #cbd5e1;
 }
 
@@ -656,7 +676,7 @@ body {
 }
 
 .section-title h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -738,7 +758,7 @@ body {
 
 .section-title-center {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   margin-bottom: 3rem;
 }
@@ -891,7 +911,7 @@ body {
 }
 
 .service-detail-image .placeholder-image {
-  width: 100%;
+  width: 84%;
   height: 100%;
 }
 
