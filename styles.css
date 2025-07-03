@@ -683,7 +683,7 @@ body {
 .story-paragraphs p {
   margin-bottom: 1.5rem;
   color: #cbd5e1;
-  font-size: 1.125rem;
+  font-size: medium;
   line-height: 1.7;
 }
 
@@ -743,10 +743,16 @@ body {
   font-weight: bold;
 }
 
-.mission-card p,
+
 .vision-card p {
   color: #cbd5e1;
-  font-size: 1.125rem;
+  /* font-size: 1.125rem; */
+  font-size: medium;
+  line-height: 1.7;
+}
+.mission-card p {
+  color: #cbd5e1;
+  font-size: medium;
   line-height: 1.7;
 }
 
