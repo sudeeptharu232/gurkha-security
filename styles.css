@@ -771,7 +771,7 @@ body {
 
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 1.5rem;
 }
 
@@ -1008,7 +1008,7 @@ body {
 
 .cta-content {
   text-align: center;
-  max-width: 32rem;
+  max-width: 41rem;
   margin: 0 auto;
 }
 
