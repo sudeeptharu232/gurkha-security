@@ -496,7 +496,7 @@ body {
 
 .placeholder-image p {
   font-size: 0.875rem;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .contact-details {
