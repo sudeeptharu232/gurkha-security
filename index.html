@@ -4,349 +4,310 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SecureGuard Pro - Professional Security Services</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/lib/index.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/dist/tailwind.min.css" rel="stylesheet">
-    
-    <!-- React and ReactDOM -->
-    <script crossorigin src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
-    <script crossorigin src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
-    
-    <!-- Babel for JSX -->
-    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.22.0/babel.min.js"></script>
-    
-    <!-- Lucide Icons -->
-    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.1/dist/umd/lucide.js"></script>
-    
-    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
-    <!-- Custom Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@100;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Michroma&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@100;400;500;700;900&display=swap" rel="stylesheet">
-
-   <style>
-        /* Custom animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .animate-fade-in-up {
-            animation: fadeInUp 0.6s ease-out forwards;
-        }
-        
-        .animate-delay-100 {
-            animation-delay: 0.1s;
-        }
-        
-        .animate-delay-200 {
-            animation-delay: 0.2s;
-        }
-        
-        .animate-delay-300 {
-            animation-delay: 0.3s;
-        }
-        
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        /* Custom gradient */
-        .gradient-bg {
-            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-        }
-        
-        /* Sidebar transition */
-        .sidebar-transition {
-            transition: transform 0.3s ease-in-out;
-        }
-        
-        /* Mobile sidebar overlay */
-        .sidebar-overlay {
-            backdrop-filter: blur(4px);
-        }
-    </style>
 </head>
-<body class="bg-slate-900 text-white">
-    <!-- Mobile Menu Button -->
-    <button id="mobile-menu-btn" class="mobile-menu-btn">
-        <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Sidebar Navigation -->
-    <nav id="sidebar" class="sidebar">
-        <div class="sidebar-content">
-            <div class="logo">
-                <div class="logo-icon">
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
                     <i class="fas fa-shield-alt"></i>
+                    <span>Gurkha Securities</span>
                 </div>
-                <div class="logo-text">
-                    <h1>Gurkha Securities</h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
             </div>
-            
-            <ul class="nav-menu">
-                <li><a href="#hero" class="nav-link active">
-                     <!-- data-section="hero" -->
-                    <i class="fas fa-home"></i>
-                    <span>Home</span>
-                </a></li>
-                <li><a href="about.html" class="nav-link">
-                    <i class="fas fa-info-circle"></i>
-                    <span>About Us</span>
-                </a></li>
-                <li><a href="services.html" class="nav-link">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Services</span>
-                </a></li>
-                <li><a href="leadership.html" class="nav-link">
-                    <i class="fas fa-users"></i>
-                    <span>Leadership</span>
-                </a></li>
-                <li><a href="#contact" class="nav-link" >
-                    <!-- data-section="contact" -->
-                    <i class="fas fa-phone"></i>
-                    <span>Contact</span>
-                </a></li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Sidebar Overlay -->
-    <div id="sidebar-overlay" class="sidebar-overlay"></div>
-
-    <!-- Main Content -->
-    <main class="main-content">
+    <main>
+        <section class="hero">
             <div class="hero2-background"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Gurkha Securities</h1>
+                    <p>Protecting your business, property, and people with experienced, licensed security professionals available 24/7</p>
+                    <div class="hero-buttons">
+                        <a href="services.html" class="btn btn-primary">Our Services</a>
+                        <a href="#contact" class="btn btn-secondary">Get Quote</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+            </div>
+        </section>
 
-        <!-- Hero Section -->
-        <section id="hero" class="hero-section">
-            <!-- <div class="hero2-background"></div> -->
-            <div class="hero-overlay"></div>
+        <section class="trust-banner">
             <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title animate-fade-in-up">
-                         <span class="text-blue">GURKHA</span> SECURITIES
-                    </h1>
-                    <p class="hero-subtitle animate-fade-in-up delay-100">
-                        Protecting what matters most with cutting-edge surveillance, access control, and cybersecurity solutions.
-                    </p>
-                    <div class="hero-buttons animate-fade-in-up delay-200">
-                        <button class="btn btn-primary" onclick="scrollToSection('contact')">
-                            <p style="font-family: 'Orbitron'; font-size: medium;">Get Free Consultation</p>
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                        <a href="services.html" class="btn btn-outline"><p class="" style="font-size: normal;">Our Services</p></a>
+                <div class="trust-content">
+                    <div class="trust-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>Licensed & Insured</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-clock"></i>
+                        <span>24/7 Availability</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-users"></i>
+                        <span>Trained Professionals</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-headset"></i>
+                        <span>Emergency Response</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services Overview Section -->
-        <section id="services" class="services-section">
-            <!-- <div class="hero2-background"></div> -->
-
+        <section class="features">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="orbitron">Our Security Services</h2>
-                    <p style="font-size: medium;">Comprehensive security solutions tailored to protect your business, property, and digital assets.</p>
+                <h2>Why Choose SecureGuard Pro?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Trained Guards</h3>
+                        <p>All our security guards undergo comprehensive training and background checks</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Real-Time Reporting</h3>
+                        <p>Digital incident reporting and real-time communication with management</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Reliable Service</h3>
+                        <p>Consistent, dependable security coverage when you need it most</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h3>Competitive Rates</h3>
+                        <p>Professional security services at affordable, transparent pricing</p>
+                    </div>
                 </div>
-                
+            </div>
+        </section>
+
+        <section class="services-preview">
+            <div class="container">
+                <h2>Our Security Services</h2>
                 <div class="services-grid">
                     <div class="service-card">
-                        <div class="service-image">
-                            <div class="service-icon">
-                                <!-- <i class="fas fa-video"></i> -->
-                                     <i class="fas fa-users"></i>
-
-                            </div>
-                        </div>
-                        <div class="service-content">
-                            <h3 class="orbitron">Physical Security</h3>
-                            <p>Unarmed security officers trained to provide on-site protection for residential, commercial, 
-institutional, and event settings. We focus on visibility, routine patrols.....</p>
-                            <!-- <ul class="service-features">
-                                <li><i class="fas fa-check"></i> HD/4K Cameras</li>
-                                <li><i class="fas fa-check"></i> Night Vision</li>
-                                <li><i class="fas fa-check"></i> Motion Detection</li>
-                                <li class="more-features">+ 1 more features</li>
-                            </ul> -->
-                            <a href="services.html" class="service-link">
-                                Learn More <i class="fas fa-chevron-right"></i>
-                            </a>
-                        </div>
+                        <i class="fas fa-building"></i>
+                        <h3>Commercial Security</h3>
+                        <p>Professional security guards for offices, retail stores, and commercial properties</p>
                     </div>
-
-                    <!-- <div class="service-card">
-                        <div class="service-image">
-                            <div class="service-icon">
-                                <i class="fas fa-lock"></i>
-                            </div>
-                        </div>
-                        <div class="service-content">
-                            <h3 class="orbitron">Access Control</h3>
-                            <p>Secure entry systems including biometric scanners, key cards, and smart locks help prevent unauthorized access by ensuring only verified individuals can enter....</p> -->
-                            <!-- <ul class="service-features">
-                                <li><i class="fas fa-check"></i> Biometric Access</li>
-                                <li><i class="fas fa-check"></i> Key Card Systems</li>
-                                <li><i class="fas fa-check"></i> Smart Locks</li>
-                                <li class="more-features">+ 1 more features</li>
-                            </ul> -->
-                            <!-- <a href="services.html" class="service-link">
-                                Learn More <i class="fas fa-chevron-right"></i>
-                            </a>
-                        </div>
-                    </div> -->
-
                     <div class="service-card">
-                        <div class="service-image">
-                            <div class="service-icon">
-                                <!-- <i class="fas fa-shield-alt"></i> -->
-                                     <i class="fa-solid fa-car"></i>
-
-                            </div>
-                        </div>
-                        <div class="service-content">
-                            <h3 class="orbitron">Vehicle Surveillance</h3>
-                            <p>Mobile patrol services to monitor and secure wider areas such as parking lots, gated 
-communities, construction sites, and business districts.....</p>
-                            <!-- <ul class="service-features">
-                                <li><i class="fas fa-check"></i> Network Security</li>
-                                <li><i class="fas fa-check"></i> Threat Detection</li>
-                                <li><i class="fas fa-check"></i> Data Protection</li>
-                                <li class="more-features">+ 1 more features</li>
-                            </ul> -->
-                            <a href="services.html" class="service-link">
-                                Learn More <i class="fas fa-chevron-right"></i>
-                            </a>
-                        </div>
+                        <i class="fas fa-home"></i>
+                        <h3>Residential Security</h3>
+                        <p>Gated community and residential property security services</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>Event Security</h3>
+                        <p>Crowd control and security management for events and gatherings</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-industry"></i>
+                        <h3>Industrial Security</h3>
+                        <p>Specialized security for warehouses, construction sites, and industrial facilities</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-car"></i>
+                        <h3>Mobile Patrols</h3>
+                        <p>Regular patrol services for multiple locations and large properties</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-eye"></i>
+                        <h3>Loss Prevention</h3>
+                        <p>Retail loss prevention and theft deterrence services</p>
                     </div>
                 </div>
-
-                <div class="section-cta orbitron">
-                    <a href="services.html" class="btn btn-primary">
-                        <p class="font-size">View All Services</p>
-                        <i class="fas fa-chevron-right"></i>
-                    </a>
+                <div class="text-center">
+                    <a href="services.html" class="btn btn-primary">View All Services</a>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <!-- <div class="hero2-background"></div> -->
-
+        <section class="stats-section">
             <div class="container">
-                
-                <div class="section-header">
-                    <h2 class="orbitron">Get In Touch</h2>
-                    <p >Ready to secure your business? Contact us for a free consultation and custom security solution.</p>
+                <h2>Our Track Record</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>Satisfied Clients</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>15</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>200+</h3>
+                        <p>Trained Guards</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>99%</h3>
+                        <p>Client Retention</p>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="contact-grid">
+        <section class="testimonials">
+            <div class="container">
+                <h2>What Our Clients Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"SecureGuard Pro has been protecting our retail locations for over 3 years. Their guards are professional, reliable, and have significantly reduced theft incidents."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>Sarah Johnson</h4>
+                            <span>Retail Chain Manager</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The mobile patrol service gives us peace of mind for our multiple warehouse locations. Excellent communication and detailed reporting."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>Mike Rodriguez</h4>
+                            <span>Logistics Director</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Professional event security that helped make our corporate conference run smoothly. Highly recommend their services."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>Emily Chen</h4>
+                            <span>Event Coordinator</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Get Your Free Security Quote</h2>
+                <div class="contact-content">
                     <div class="contact-info">
-                        <div class="contact-image">
-                            <div class="placeholder-image">
-                                <i class="fas fa-building"></i>
-                                <p class="bright-color">Our 24/7 Security Operations Center</p>
-                                <h3 class="orbitron">Contact Information</h3>
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <div>
-                                    <p class="contact-label">Phone</p>
-                                    <p class="contact-value">+1 (555) 123-4567</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <div>
-                                    <p class="contact-label">Email</p>
-                                    <p class="contact-value">info@secureguardpro.com</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <p class="contact-label">Address</p>
-                                    <p class="contact-value">123 Security Blvd, Suite 100<br>Business District, NY 10001</p>
-                                </div>
-                            </div>
-                            <div class="contact-item2 bright-color">
-                                <i class="fas fa-clock bright-color"></i>
-                                <div>
-                                    <p class="contact-label">Hours</p>
-                                    <p class=" bright-color">24/7 Emergency Support<br>Mon-Fri 8AM-6PM (Office)</p>
-                                </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>24/7 Emergency Line</h4>
+                                <p>(555) 123-GUARD</p>
                             </div>
                         </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@secureguardpro.com</p>
                             </div>
                         </div>
-                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Office Location</h4>
+                                <p>123 Security Plaza<br>Business District, NY 10001</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Office Hours</h4>
+                                <p>Mon-Fri: 8AM-6PM<br>Emergency: 24/7</p>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="contact-form-container">
-                        <h3 class="orbitron " >Request Consultation</h3>
-                        <form id="contact-form" class="contact-form">
-                            <div class="form-group">
-                                <input type="text" id="name" name="name" placeholder="Full Name *" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="email" name="email" placeholder="Email Address *" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="company" name="company" placeholder="Company Name">
-                            </div>
-                            <div class="form-group">
-                                <select id="service" name="service">
-                                    <option value="">Select Service</option>
-                                    <option value="surveillance">Surveillance Systems</option>
-                                    <option value="access-control">Access Control</option>
-                                    <option value="cybersecurity">Cybersecurity</option>
-                                    <option value="consultation">General Consultation</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <textarea id="message" name="message" placeholder="Tell us about your security needs... *" rows="4" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-full orbitron"><p class="font-size">Send Message</p> </button>
-                        </form>
-                    </div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Your Phone">
+                        <select>
+                            <option value="">Select Service Needed</option>
+                            <option value="commercial">Commercial Security</option>
+                            <option value="residential">Residential Security</option>
+                            <option value="event">Event Security</option>
+                            <option value="industrial">Industrial Security</option>
+                            <option value="patrol">Mobile Patrols</option>
+                            <option value="loss">Loss Prevention</option>
+                        </select>
+                        <textarea placeholder="Tell us about your security needs" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary">Get Free Quote</button>
+                    </form>
                 </div>
             </div>
         </section>
+    </main>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-logo">
-                        <div class="logo-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Gurkha Securities</h3>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>SecureGuard Pro</span>
                     </div>
-                    <p class="footer-tagline">Professional Security Services You Can Trust</p>
-                    <p class="footer-copyright">© 2024 SecureGuard Pro. All rights reserved. | Licensed & Insured Security Services</p>
+                    <p>Professional security services protecting businesses and communities since 2009.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Commercial Security</a></li>
+                        <li><a href="services.html">Residential Security</a></li>
+                        <li><a href="services.html">Event Security</a></li>
+                        <li><a href="services.html">Mobile Patrols</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> (555) 123-GUARD</p>
+                    <p><i class="fas fa-envelope"></i> info@secureguardpro.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Security Plaza, NY</p>
                 </div>
             </div>
-        </footer>
-    </main>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SecureGuard Pro. All rights reserved. | Licensed & Insured</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
