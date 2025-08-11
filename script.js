@@ -1,206 +1,218 @@
-// Mobile menu functionality
-document.addEventListener("DOMContentLoaded", () => {
-  const mobileMenuBtn = document.getElementById("mobile-menu-btn")
-  const sidebar = document.getElementById("sidebar")
-  const sidebarOverlay = document.getElementById("sidebar-overlay")
-  const navLinks = document.querySelectorAll(".nav-link")
+// Mobile Navigation Toggle
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
 
-  // Toggle mobile menu
-  function toggleMobileMenu() {
-    sidebar.classList.toggle("open")
-    sidebarOverlay.classList.toggle("active")
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
 
-    // Update button icon
-    const icon = mobileMenuBtn.querySelector("i")
-    if (sidebar.classList.contains("open")) {
-      icon.className = "fas fa-times"
-    } else {
-      icon.className = "fas fa-bars"
-    }
-  }
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+}));
 
-  // Close mobile menu
-  function closeMobileMenu() {
-    sidebar.classList.remove("open")
-    sidebarOverlay.classList.remove("active")
-
-    // Reset button icon
-    const icon = mobileMenuBtn.querySelector("i")
-    icon.className = "fas fa-bars"
-  }
-
-  // Event listeners
-  mobileMenuBtn.addEventListener("click", toggleMobileMenu)
-  sidebarOverlay.addEventListener("click", closeMobileMenu)
-
-  // Close menu when clicking nav links
-  navLinks.forEach((link) => {
-    link.addEventListener("click", closeMobileMenu)
-  })
-
-  // Handle active navigation states for single page
-  if (window.location.pathname === "/" || window.location.pathname.includes("index.html")) {
-    handleSinglePageNavigation()
-  }
-
-  // Contact form functionality
-  const contactForm = document.getElementById("contact-form")
-  if (contactForm) {
-    contactForm.addEventListener("submit", handleContactForm)
-  }
-
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault()
-      const target = document.querySelector(this.getAttribute("href"))
-      if (target) {
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        })
-      }
-    })
-  })
-})
-
-// Single page navigation handling
-function handleSinglePageNavigation() {
-  const navLinks = document.querySelectorAll(".nav-link[data-section]")
-  const sections = document.querySelectorAll("section[id]")
-
-  // Update active nav link based on scroll position
-  function updateActiveNavLink() {
-    let current = ""
-    const scrollPosition = window.scrollY + 100
-
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop
-      const sectionHeight = section.offsetHeight
-
-      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-        current = section.getAttribute("id")
-      }
-    })
-
-    navLinks.forEach((link) => {
-      link.classList.remove("active")
-      if (link.getAttribute("data-section") === current) {
-        link.classList.add("active")
-      }
-    })
-  }
-
-  // Scroll event listener
-  window.addEventListener("scroll", updateActiveNavLink)
-
-  // Initial call
-  updateActiveNavLink()
-}
-
-// Smooth scroll to section function
-function scrollToSection(sectionId) {
-  const element = document.getElementById(sectionId)
-  if (element) {
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    })
-  }
-}
-
-// Contact form handler
-function handleContactForm(e) {
-  e.preventDefault()
-
-  const formData = new FormData(e.target)
-  const data = {
-    name: formData.get("name"),
-    email: formData.get("email"),
-    company: formData.get("company"),
-    service: formData.get("service"),
-    message: formData.get("message"),
-  }
-
-  // Basic validation
-  if (!data.name || !data.email || !data.message) {
-    alert("Please fill in all required fields.")
-    return
-  }
-
-  // Email validation
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  if (!emailRegex.test(data.email)) {
-    alert("Please enter a valid email address.")
-    return
-  }
-
-  // Simulate form submission
-  alert("Thank you for your inquiry! We will contact you within 24 hours.")
-
-  // Reset form
-  e.target.reset()
-}
-
-// Animation on scroll
-function animateOnScroll() {
-  const animatedElements = document.querySelectorAll(".animate-fade-in-up")
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.style.animationPlayState = "running"
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
-      })
-    },
-    {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px",
-    },
-  )
+    });
+});
 
-  animatedElements.forEach((element) => {
-    observer.observe(element)
-  })
-}
+// Form submission handling
+document.querySelectorAll('.contact-form').forEach(form => {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const button = this.querySelector('button[type="submit"]');
+        const originalText = button.textContent;
+        
+        // Show loading state
+        button.innerHTML = '<span class="loading"></span> Sending...';
+        button.disabled = true;
+        
+        // Simulate form submission
+        setTimeout(() => {
+            button.innerHTML = '✓ Quote Sent!';
+            button.style.background = '#10b981';
+            
+            // Reset form
+            this.reset();
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = '';
+                button.disabled = false;
+            }, 3000);
+        }, 2000);
+    });
+});
 
-// Initialize animations when DOM is loaded
-document.addEventListener("DOMContentLoaded", animateOnScroll)
+// Fade in animation on scroll
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
 
-// Handle window resize
-window.addEventListener("resize", () => {
-  // Close mobile menu on desktop
-  if (window.innerWidth >= 1024) {
-    const sidebar = document.getElementById("sidebar")
-    const sidebarOverlay = document.getElementById("sidebar-overlay")
-    const mobileMenuBtn = document.getElementById("mobile-menu-btn")
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
 
-    sidebar.classList.remove("open")
-    sidebarOverlay.classList.remove("active")
+// Add fade-in class to elements and observe them
+document.addEventListener('DOMContentLoaded', () => {
+    const elementsToAnimate = document.querySelectorAll('.feature-card, .service-card, .reason-item, .cert-item, .team-member, .value-item, .advisor-item, .testimonial-card, .additional-item, .process-step');
+    
+    elementsToAnimate.forEach(el => {
+        el.classList.add('fade-in');
+        observer.observe(el);
+    });
+});
 
-    // Reset button icon
-    const icon = mobileMenuBtn.querySelector("i")
-    icon.className = "fas fa-bars"
-  }
-})
-
-// Utility functions
-function debounce(func, wait) {
-  let timeout
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout)
-      func(...args)
+// Header background change on scroll
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 100) {
+        header.style.background = 'rgba(255, 255, 255, 0.95)';
+        header.style.backdropFilter = 'blur(10px)';
+    } else {
+        header.style.background = '#fff';
+        header.style.backdropFilter = 'none';
     }
-    clearTimeout(timeout)
-    timeout = setTimeout(later, wait)
-  }
+});
+
+// Statistics counter animation
+function animateCounter(element, target) {
+    let current = 0;
+    const increment = target / 100;
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
+        element.textContent = Math.floor(current) + (element.textContent.includes('+') ? '+' : '') + (element.textContent.includes('%') ? '%' : '');
+    }, 20);
 }
 
-// Smooth scroll polyfill for older browsers
-if (!("scrollBehavior" in document.documentElement.style)) {
-  const script = document.createElement("script")
-  script.src = "https://cdn.jsdelivr.net/gh/iamdustan/smoothscroll@master/src/smoothscroll.js"
-  document.head.appendChild(script)
-}
+// Animate counters when they come into view
+const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = parseInt(counter.textContent);
+            animateCounter(counter, target);
+            counterObserver.unobserve(counter);
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.stat-item h3').forEach(counter => {
+        counterObserver.observe(counter);
+    });
+});
+
+// Add active class to current page navigation
+document.addEventListener('DOMContentLoaded', () => {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
+    });
+});
+
+// Keyboard navigation support
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    }
+});
+
+// Service card hover effects
+document.querySelectorAll('.service-card, .feature-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px) scale(1.02)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+    });
+});
+
+// Trust banner scroll effect
+window.addEventListener('scroll', () => {
+    const trustBanner = document.querySelector('.trust-banner');
+    if (trustBanner) {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.2;
+        trustBanner.style.transform = `translateY(${rate}px)`;
+    }
+});
+
+// Add loading states for better UX
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+});
+
+// Error handling for images
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('error', function() {
+        this.style.display = 'none';
+    });
+});
+
+// Testimonial carousel effect (simple)
+document.addEventListener('DOMContentLoaded', () => {
+    const testimonials = document.querySelectorAll('.testimonial-card');
+    let currentTestimonial = 0;
+    
+    if (testimonials.length > 0) {
+        setInterval(() => {
+            testimonials[currentTestimonial].style.opacity = '0.7';
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            testimonials[currentTestimonial].style.opacity = '1';
+        }, 5000);
+    }
+});
+
+// Process steps animation
+const processObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }, index * 200);
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const processSteps = document.querySelectorAll('.process-step');
+    processSteps.forEach(step => {
+        step.style.opacity = '0';
+        step.style.transform = 'translateY(30px)';
+        step.style.transition = 'all 0.6s ease';
+        processObserver.observe(step);
+    });
+});
+
+console.log('SecureGuard Pro website loaded successfully!');
