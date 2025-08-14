@@ -711,8 +711,8 @@ body {
     width: 380px;      
     height: auto;       
     /* border-radius: 8px;  */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border: 2px solid #ccc;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    /* border: 2px solid #ccc; */
     transition: transform 0.2s ease;
 }
 /* Mission Vision */
