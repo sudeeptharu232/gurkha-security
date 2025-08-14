@@ -139,12 +139,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Keyboard navigation support
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    }
-});
+// document.addEventListener('keydown', (e) => {
+//     if (e.key === 'Escape') {
+//         hamburger.classList.remove('active');
+//         navMenu.classList.remove('active');
+//     }
+// });
 
 // Service card hover effects
 document.querySelectorAll('.service-card, .feature-card').forEach(card => {
@@ -158,14 +158,14 @@ document.querySelectorAll('.service-card, .feature-card').forEach(card => {
 });
 
 // Trust banner scroll effect
-window.addEventListener('scroll', () => {
-    const trustBanner = document.querySelector('.trust-banner');
-    if (trustBanner) {
-        const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.2;
-        trustBanner.style.transform = `translateY(${rate}px)`;
-    }
-});
+// window.addEventListener('scroll', () => {
+//     const trustBanner = document.querySelector('.trust-banner');
+//     if (trustBanner) {
+//         const scrolled = window.pageYOffset;
+//         const rate = scrolled * -0.2;
+//         trustBanner.style.transform = `translateY(${rate}px)`;
+//     }
+// });
 
 // Add loading states for better UX
 window.addEventListener('load', () => {
