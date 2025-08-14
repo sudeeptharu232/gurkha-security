@@ -166,7 +166,7 @@ body {
 .hero-text p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: #64748b;
+    color: #333;
 }
 
 .hero-buttons {
@@ -693,7 +693,7 @@ body {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     line-height: 1.8;
-    color: #64748b;
+    color: #333;
     text-align: justify;
 }
 .service-content p{
@@ -1292,7 +1292,7 @@ body {
 }
 
 .contact-item p {
-    color: #64748b;
+    color: #333;
 }
 
 .contact-form {
