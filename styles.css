@@ -139,7 +139,7 @@ body {
   /* top: 90px;
   left: -150px; */
   opacity: 0.3;
-  z-index: 999;
+  /* z-index: 999; */
   pointer-events: none;
   background-size: 1500px 1500px; 
   background-repeat: no-repeat;
