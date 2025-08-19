@@ -73,7 +73,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Add fade-in class to elements and observe them
 document.addEventListener('DOMContentLoaded', () => {
-    const elementsToAnimate = document.querySelectorAll('.feature-card, .service-card, .reason-item, .cert-item, .team-member, .value-item, .advisor-item, .testimonial-card, .additional-item, .process-step');
+    const elementsToAnimate = document.querySelectorAll('.feature-card, .service-card, .reason-item, .cert-item, .team-member, .value-item, .advisor-item, .testimonial-card, .additional-item, .process-step, .mv-item');
     
     elementsToAnimate.forEach(el => {
         el.classList.add('fade-in');
@@ -180,18 +180,41 @@ document.querySelectorAll('img').forEach(img => {
 });
 
 // Testimonial carousel effect (simple)
+// document.addEventListener('DOMContentLoaded', () => {
+//     const testimonials = document.querySelectorAll('.testimonial-card');
+//     let currentTestimonial = 0;
+    
+//     if (testimonials.length > 0) {
+//         setInterval(() => {
+//             testimonials[currentTestimonial].style.opacity = '0.7';
+//             currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+//             testimonials[currentTestimonial].style.opacity = '1';
+//         }, 5000);
+//     }
+// });
+
+// Testimonial carousel effect (scale + reset)
 document.addEventListener('DOMContentLoaded', () => {
     const testimonials = document.querySelectorAll('.testimonial-card');
     let currentTestimonial = 0;
     
     if (testimonials.length > 0) {
+        testimonials[currentTestimonial].classList.add('active'); // first card active
+
         setInterval(() => {
+            // reset current
+            testimonials[currentTestimonial].classList.remove('active');
+            
+            // move to next
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            testimonials[currentTestimonial].classList.add('active');
             testimonials[currentTestimonial].style.opacity = '0.7';
             currentTestimonial = (currentTestimonial + 1) % testimonials.length;
             testimonials[currentTestimonial].style.opacity = '1';
         }, 5000);
     }
 });
+
 
 // Process steps animation
 const processObserver = new IntersectionObserver((entries) => {

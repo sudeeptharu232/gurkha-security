@@ -60,7 +60,8 @@ body {
     align-items: center;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #CFDAE0;
+    color: #fff;
+    /* color: #CFDAE0; */
 }
 
 .logo2 i {
@@ -84,7 +85,7 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-    color: #3E563E;
+    color: #203023;
 }
 
 .nav-link.active::after {
@@ -197,7 +198,8 @@ top: 192px;
 /* Trust Banner */
 .trust-banner {
     background: #203023;
-    color: #CFDAE0;
+    /* color: #CFDAE0; */
+    color: #fff;
     padding: 2rem 0;
     position: relative;
 }
@@ -404,12 +406,12 @@ top: 192px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border: 2px solid #203023;
+    border: 2px solid #94A98A;
 }
 
 .stat-item h3 {
     font-size: 3rem;
-    color: #94A98A;
+    color: #203023;
     margin-bottom: 0.5rem;
 }
 
@@ -442,7 +444,7 @@ top: 192px;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border-left: 4px solid #203023;
+    border-left: 4px solid #94A98A;
 }
 
 .testimonial-content {
@@ -482,7 +484,7 @@ top: 192px;
     padding: 2rem;
     background: #f8fafc;
     border-radius: 10px;
-    border-left: 5px solid #203023;
+    border-left: 5px solid #94A98A;
 }
 
 .service-detail:nth-child(even) {
@@ -595,14 +597,17 @@ top: 192px;
     background: #f8fafc;
     border-radius: 10px;
     position: relative;
-    border: 2px solid #203023;
+    border: 2px solid #94A98A;
+    transition: ease-in 0.3s;
 
 }
-
+.process-step:hover{
+    transform: translateY(-2px);
+}
 .step-number {
     width: 60px;
     height: 60px;
-    background: #94A98A;
+    background: #203023;
     color: #fff;
     border-radius: 50%;
     display: flex;
@@ -749,9 +754,23 @@ top: 192px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+
     /* border-bottom: 4px solid #203023; */
 }
+.service-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    /* border-left: 4px solid #203023; */
+}
 
+.mv-item:hover {
+    transform: translateY(-5px);
+}
 .mv-item i {
     font-size: 3rem;
     color: #94A98A;
@@ -904,9 +923,13 @@ top: 192px;
     background: #f8fafc;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border: 2px solid #203023;
-}
+    transition: transform 0.3s ease;
 
+    border: 2px solid #94A98A;
+}
+.cert-item:hover{
+    transform: translateY(-1px);
+}
 .cert-item i {
     font-size: 3rem;
     color: #203023;
@@ -1064,12 +1087,15 @@ top: 192px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: ease-in 0.3;
     /* border-left: 4px solid #203023; */
 }
-
+.value-item:hover{
+    transform: translateY(-1px);
+}
 .value-item i {
     font-size: 3rem;
-    color: #203023;
+    color: #94A98A;
     margin-bottom: 1rem;
 }
 
@@ -1102,9 +1128,12 @@ top: 192px;
     padding: 2rem;
     background: #f8fafc;
     border-radius: 10px;
-    border: 2px solid #203023;
+    border: 2px solid #94A98A;
+    transition: ease-in 0.1s;
 }
-
+.org-level:hover{
+    transform: translateY(-5px);
+}
 .org-level h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -1164,9 +1193,12 @@ top: 192px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: ease-in 0.3s;
     /* border-bottom: 3px solid #203023; */
 }
-
+.advisor-item:hover{
+    transform: translateY(-1px);
+}
 .advisor-item h4 {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
@@ -1235,7 +1267,7 @@ top: 192px;
     padding: 2rem;
     background: #f8fafc;
     border-radius: 10px;
-    border: 2px solid #203023;
+    border: 2px solid #94A98A;
 }
 
 .career-positions h4 {
@@ -1243,6 +1275,18 @@ top: 192px;
     margin-bottom: 1rem;
     color: #091008;
 }
+.testimonial-card {
+  opacity: 0.7;
+  transform: scale(1);
+  transition: all 0.5s ease; /* smooth animation */
+}
+
+.testimonial-card.active {
+  opacity: 1;
+  transform: scale(1.1); /* makes card bigger */
+  z-index: 10; /* ensures active card stays on top */
+}
+
 
 .career-positions ul {
     list-style: none;
@@ -1351,7 +1395,7 @@ top: 192px;
 
 .footer-section h4 {
     margin-bottom: 1rem;
-    color: #CFDAE0;
+    color: #fff;
 }
 
 .footer-section ul {
@@ -1363,17 +1407,19 @@ top: 192px;
 }
 
 .footer-section ul li a {
-    color: #CFDAE0;
+    color: #fff;
+    /* color: #CFDAE0; */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-    color: #203023;
+    /* color: #203023; */
+    opacity: 0.5;
 }
 
 .footer-section p {
-    color: #CFDAE0;
+    color: #fff;
     margin-bottom: 0.5rem;
 }
 
@@ -1394,14 +1440,15 @@ top: 192px;
 }
 
 .social-links a:hover {
-    color: #203023;
+    /* color: #203023; */
+    opacity: 0.3;
 }
 
 .footer-bottom {
     border-top: 1px solid #334155;
     padding-top: 1rem;
     text-align: center;
-    color: #CFDAE0;
+    color: #fff;
 }
 
 /* Responsive Design */
