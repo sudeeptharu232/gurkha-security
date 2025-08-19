@@ -8,7 +8,7 @@
 body {
     font-family: 'poppins';
     line-height: 1.6;
-    color: #333;
+    color: #3E563E;
     background-color: #fff;
 }
 
@@ -27,7 +27,7 @@ body {
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    border-bottom: 3px solid #0b2b26;
+    border-bottom: 3px solid #203023;
 }
 
 .navbar {
@@ -48,7 +48,7 @@ body {
     align-items: center;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #0b2b26;
+    color: #203023;
 }
 
 .logo i {
@@ -60,7 +60,7 @@ body {
     align-items: center;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #fff;
+    color: #CFDAE0;
 }
 
 .logo2 i {
@@ -75,7 +75,7 @@ body {
 }
 
 .nav-link {
-    color: #333;
+    color: #3E563E;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -84,7 +84,7 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-    color: #0b2b26;
+    color: #3E563E;
 }
 
 .nav-link.active::after {
@@ -94,7 +94,7 @@ body {
     left: 0;
     width: 100%;
     height: 2px;
-    background: #0b2b26;
+    background: #203023;
 }
 
 .hamburger {
@@ -106,7 +106,7 @@ body {
 .bar {
     width: 25px;
     height: 3px;
-    background: #333;
+    background: #3E563E;
     margin: 3px 0;
     transition: 0.3s;
 }
@@ -169,13 +169,13 @@ top: 192px;
     line-height: 100px;
     margin-bottom: 1rem;
     font-weight: 700;
-    color: #1e293b;
+    color: #091008;
 }
 
 .hero-text p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: #333;
+    color: #3E563E;
 }
 
 .hero-buttons {
@@ -189,15 +189,15 @@ top: 192px;
 
 .hero-image i {
     font-size: 15rem;
-    color: #0b2b26;
+    color: #203023;
     position: relative;
     /* opacity: 0.8; */
 }
 
 /* Trust Banner */
 .trust-banner {
-    background: #0b2b26;
-    color: #fff;
+    background: #203023;
+    color: #CFDAE0;
     padding: 2rem 0;
     position: relative;
 }
@@ -227,7 +227,7 @@ top: 192px;
 
 /* Page Hero */
 .page-hero {
-    background: linear-gradient(135deg, #0b2b26 0%, #0b2b26 100%);
+    background: linear-gradient(135deg, #203023 0%, #203023 100%);
     color: #fff;
     padding: 120px 0 80px;
     text-align: center;
@@ -258,23 +258,23 @@ top: 192px;
 }
 
 .btn-primary {
-    background: #0b2b26;
+    background: #203023;
     color: #fff;
 }
 
 .btn-primary:hover {
-    background: #0b2b26;
+    background: #203023;
     transform: translateY(-2px);
 }
 
 .btn-secondary {
     background: transparent;
-    color: #0b2b26;
-    border: 2px solid #0b2b26;
+    color: #203023;
+    border: 2px solid #203023;
 }
 
 .btn-secondary:hover {
-    background: #0b2b26;
+    background: #203023;
     color: #fff;
 }
 
@@ -290,9 +290,12 @@ top: 192px;
     font-size: 2.5rem;
     margin-bottom: 3rem;
     font-family: 'Orbitron';
-    color: #1e293b;
+    color: #091008;
 }
-
+.contact-form input::placeholder,.contact-form textarea::placeholder,
+.contact-form select::placeholder{
+    color: #CFDAE0;
+}
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -306,7 +309,7 @@ top: 192px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
-    /* border-top: 4px solid #0b2b26; */
+    /* border-top: 4px solid #203023; */
 }
 
 .feature-card:hover {
@@ -315,14 +318,14 @@ top: 192px;
 
 .feature-card i {
     font-size: 3rem;
-    color: #0b2b26;
+    color: #203023;
     margin-bottom: 1rem;
 }
 
 .feature-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: #091008;
 }
 
 /* Services Preview */
@@ -335,7 +338,7 @@ top: 192px;
     font-size: 2.5rem;
     margin-bottom: 3rem;
     font-family: 'Orbitron';
-    color: #1e293b;
+    color: #091008;
 }
 
 .services-grid {
@@ -352,7 +355,7 @@ top: 192px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
-    /* border-left: 4px solid #0b2b26; */
+    /* border-left: 4px solid #203023; */
 }
 
 .service-card:hover {
@@ -361,14 +364,14 @@ top: 192px;
 
 .service-card i {
     font-size: 3rem;
-    color: #0b2b26;
+    color: #94A98A;
     margin-bottom: 1rem;
 }
 
 .service-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: #091008;
 }
 
 .text-center {
@@ -386,7 +389,7 @@ top: 192px;
     font-size: 2.5rem;
     margin-bottom: 3rem;
     font-family: 'Orbitron';
-    color: #1e293b;
+    color: #091008;
 }
 
 .stats-grid {
@@ -401,18 +404,18 @@ top: 192px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border: 2px solid #0b2b26;
+    border: 2px solid #203023;
 }
 
 .stat-item h3 {
     font-size: 3rem;
-    color: #0b2b26;
+    color: #94A98A;
     margin-bottom: 0.5rem;
 }
 
 .stat-item p {
     font-weight: 600;
-    color: #1e293b;
+    color: #091008;
 }
 
 /* Testimonials */
@@ -425,7 +428,7 @@ top: 192px;
     font-size: 2.5rem;
     margin-bottom: 3rem;
     font-family: 'Orbitron';
-    color: #1e293b;
+    color: #091008;
 }
 
 .testimonials-grid {
@@ -439,7 +442,7 @@ top: 192px;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border-left: 4px solid #0b2b26;
+    border-left: 4px solid #203023;
 }
 
 .testimonial-content {
@@ -448,23 +451,26 @@ top: 192px;
 
 .testimonial-content p {
     font-style: italic;
-    color: #64748b;
+    color: #7A94A1;
     line-height: 1.6;
 }
 
 .testimonial-author h4 {
-    color: #1e293b;
+    color: #091008;
     margin-bottom: 0.5rem;
 }
 
 .testimonial-author span {
-    color: #0b2b26;
+    color: #203023;
     font-weight: 600;
 }
 
 /* Services Detailed */
 .services-detailed {
     padding: 80px 0;
+}
+.service-icon img{
+    width: 485px;
 }
 
 .service-detail {
@@ -476,13 +482,13 @@ top: 192px;
     padding: 2rem;
     background: #f8fafc;
     border-radius: 10px;
-    border-left: 5px solid #0b2b26;
+    border-left: 5px solid #203023;
 }
 
 .service-detail:nth-child(even) {
     grid-template-columns: auto 1fr;
     border-left: none;
-    border-right: 5px solid #0b2b26;
+    border-right: 5px solid #203023;
 }
 
 .service-detail:nth-child(even) .service-content {
@@ -497,7 +503,7 @@ top: 192px;
     font-size: 2rem;
     margin-bottom: 1rem;
     font-family: 'Orbitron';
-    color: #1e293b;
+    color: #091008;
 }
 
 .service-content ul {
@@ -515,13 +521,13 @@ top: 192px;
     content: '✓';
     position: absolute;
     left: 0;
-    color: #0b2b26;
+    color: #203023;
     font-weight: bold;
 }
 
 .service-icon i {
     font-size: 5rem;
-    color: #0b2b26;
+    color: #203023;
 }
 
 /* Additional Services */
@@ -534,7 +540,7 @@ top: 192px;
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #1e293b;
+    color: #091008;
 }
 
 .additional-grid {
@@ -549,19 +555,19 @@ top: 192px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border-top: 3px solid #0b2b26;
+    border-top: 3px solid #203023;
 }
 
 .additional-item i {
     font-size: 3rem;
-    color: #0b2b26;
+    color: #203023;
     margin-bottom: 1rem;
 }
 
 .additional-item h4 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: #091008;
 }
 
 /* Service Process */
@@ -574,7 +580,7 @@ top: 192px;
     font-size: 2.5rem;
     margin-bottom: 3rem;
     font-family: 'Orbitron';
-    color: #1e293b;
+    color: #091008;
 }
 
 .process-steps {
@@ -589,14 +595,14 @@ top: 192px;
     background: #f8fafc;
     border-radius: 10px;
     position: relative;
-    border: 2px solid #0b2b26;
+    border: 2px solid #203023;
 
 }
 
 .step-number {
     width: 60px;
     height: 60px;
-    background: #0b2b26;
+    background: #94A98A;
     color: #fff;
     border-radius: 50%;
     display: flex;
@@ -610,7 +616,7 @@ top: 192px;
 .process-step h3 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: #091008;
     font-family: 'Orbitron';
 }
 
@@ -624,7 +630,7 @@ top: 192px;
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #1e293b;
+    color: #091008;
 }
 
 .pricing-content {
@@ -637,7 +643,7 @@ top: 192px;
 .pricing-text h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: #091008;
 }
 
 .pricing-text ul {
@@ -655,7 +661,7 @@ top: 192px;
     content: '✓';
     position: absolute;
     left: 0;
-    color: #0b2b26;
+    color: #203023;
     font-weight: bold;
 }
 
@@ -676,7 +682,7 @@ top: 192px;
 }
 
 .feature-item i {
-    color: #0b2b26;
+    color: #203023;
     font-size: 1.2rem;
 }
 
@@ -695,7 +701,7 @@ top: 192px;
 .story-text h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: #1e293b;
+    color: #091008;
     font-family: 'Orbitron';
 }
 
@@ -703,7 +709,7 @@ top: 192px;
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     line-height: 1.8;
-    color: #333;
+    color: #3E563E;
     text-align: justify;
 }
 .service-content p{
@@ -743,19 +749,19 @@ top: 192px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    /* border-bottom: 4px solid #0b2b26; */
+    /* border-bottom: 4px solid #203023; */
 }
 
 .mv-item i {
     font-size: 3rem;
-    color: #0b2b26;
+    color: #94A98A;
     margin-bottom: 1rem;
 }
 
 .mv-item h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: #091008;
 }
 
 /* Why Choose Us */
@@ -767,7 +773,7 @@ top: 192px;
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #1e293b;
+    color: #091008;
 }
 
 .reasons-grid {
@@ -792,14 +798,14 @@ top: 192px;
 
 .reason-item i {
     font-size: 2.5rem;
-    color: #0b2b26;
+    color: #203023;
     margin-bottom: 1rem;
 }
 
 .reason-item h4 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: #091008;
 }
 
 /* Training Standards */
@@ -812,7 +818,7 @@ top: 192px;
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #1e293b;
+    color: #091008;
 }
 
 .training-content {
@@ -825,7 +831,7 @@ top: 192px;
 .training-text h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: #091008;
 }
 
 .training-text ul {
@@ -843,7 +849,7 @@ top: 192px;
     content: '✓';
     position: absolute;
     left: 0;
-    color: #0b2b26;
+    color: #203023;
     font-weight: bold;
 }
 
@@ -863,14 +869,14 @@ top: 192px;
 
 .training-item i {
     font-size: 2rem;
-    color: #0b2b26;
+    color: #203023;
     margin-bottom: 1rem;
 }
 
 .training-item h4 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    color: #1e293b;
+    color: #091008;
 }
 
 /* Certifications */
@@ -883,7 +889,7 @@ top: 192px;
     font-size: 2.5rem;
     margin-bottom: 3rem;
     font-family: 'Orbitron';
-    color: #1e293b;
+    color: #091008;
 }
 
 .cert-grid {
@@ -898,19 +904,19 @@ top: 192px;
     background: #f8fafc;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border: 2px solid #0b2b26;
+    border: 2px solid #203023;
 }
 
 .cert-item i {
     font-size: 3rem;
-    color: #0b2b26;
+    color: #203023;
     margin-bottom: 1rem;
 }
 
 .cert-item h4 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: #091008;
 }
 
 /* Community Involvement */
@@ -923,7 +929,7 @@ top: 192px;
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #1e293b;
+    color: #091008;
 }
 
 .community-content {
@@ -936,7 +942,7 @@ top: 192px;
 .community-text h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: #091008;
 }
 
 .community-text p {
@@ -963,7 +969,7 @@ top: 192px;
 }
 
 .activity-item i {
-    color: #0b2b26;
+    color: #203023;
     font-size: 1.5rem;
 }
 
@@ -984,7 +990,7 @@ top: 192px;
     padding: 2rem;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    /* border-top: 4px solid #0b2b26; */
+    /* border-top: 4px solid #203023; */
 }
 
 .member-photo {
@@ -993,18 +999,18 @@ top: 192px;
 
 .member-photo i {
     font-size: 5rem;
-    color: #0b2b26;
+    color: #94A98A;
 }
 
 .member-info h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     font-family: 'Orbitron';
-    color: #1e293b;
+    color: #091008;
 }
 
 .position {
-    color: #0b2b26;
+    color: #203023;
     font-weight: 600;
     margin-bottom: 1rem;
     font-size: 1.1rem;
@@ -1024,7 +1030,7 @@ top: 192px;
 }
 
 .credential {
-    background: #0b2b26;
+    background: #94A98A;
     color: #fff;
     padding: 0.3rem 0.8rem;
     border-radius: 15px;
@@ -1043,7 +1049,7 @@ top: 192px;
     font-size: 2.5rem;
     margin-bottom: 3rem;
     font-family: 'Orbitron';
-    color: #1e293b;
+    color: #091008;
 }
 
 .values-grid {
@@ -1058,19 +1064,19 @@ top: 192px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    /* border-left: 4px solid #0b2b26; */
+    /* border-left: 4px solid #203023; */
 }
 
 .value-item i {
     font-size: 3rem;
-    color: #0b2b26;
+    color: #203023;
     margin-bottom: 1rem;
 }
 
 .value-item h4 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: #091008;
 }
 
 /* Organizational Structure */
@@ -1083,7 +1089,7 @@ top: 192px;
     font-size: 2.5rem;
     margin-bottom: 3rem;
     font-family: 'Orbitron';
-    color: #1e293b;
+    color: #091008;
 }
 
 .org-chart {
@@ -1096,13 +1102,13 @@ top: 192px;
     padding: 2rem;
     background: #f8fafc;
     border-radius: 10px;
-    border: 2px solid #0b2b26;
+    border: 2px solid #203023;
 }
 
 .org-level h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: #091008;
     text-align: center;
 }
 
@@ -1121,7 +1127,7 @@ top: 192px;
     content: '•';
     position: absolute;
     left: 0;
-    color: #0b2b26;
+    color: #203023;
     font-weight: bold;
 }
 
@@ -1136,7 +1142,7 @@ top: 192px;
     font-size: 2.5rem;
     margin-bottom: 1rem;
     font-family: 'Orbitron';
-    color: #1e293b;
+    color: #091008;
 }
 
 .section-intro {
@@ -1158,17 +1164,17 @@ top: 192px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    /* border-bottom: 3px solid #0b2b26; */
+    /* border-bottom: 3px solid #203023; */
 }
 
 .advisor-item h4 {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
-    color: #1e293b;
+    color: #091008;
 }
 
 .advisor-title {
-    color: #0b2b26;
+    color: #203023;
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -1183,7 +1189,7 @@ top: 192px;
     font-size: 2.5rem;
     margin-bottom: 3rem;
     font-family: 'Orbitron';
-    color: #1e293b;
+    color: #091008;
 }
 
 .career-content {
@@ -1196,7 +1202,7 @@ top: 192px;
 .career-text h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: #091008;
 }
 
 .career-text p {
@@ -1221,7 +1227,7 @@ top: 192px;
 }
 
 .benefit-item i {
-    color: #0b2b26;
+    color: #203023;
     font-size: 1.2rem;
 }
 
@@ -1229,13 +1235,13 @@ top: 192px;
     padding: 2rem;
     background: #f8fafc;
     border-radius: 10px;
-    border: 2px solid #0b2b26;
+    border: 2px solid #203023;
 }
 
 .career-positions h4 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: #091008;
 }
 
 .career-positions ul {
@@ -1253,7 +1259,7 @@ top: 192px;
     content: '•';
     position: absolute;
     left: 0;
-    color: #0b2b26;
+    color: #203023;
     font-weight: bold;
 }
 
@@ -1268,7 +1274,7 @@ top: 192px;
     font-size: 2.5rem;
     margin-bottom: 3rem;
     font-family: 'Orbitron';
-    color: #1e293b;
+    color: #091008;
 }
 
 .contact-content {
@@ -1291,18 +1297,18 @@ top: 192px;
 
 .contact-item i {
     font-size: 2rem;
-    color: #0b2b26;
+    color: #94A98A;
     width: 50px;
 }
 
 .contact-item h4 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    color: #1e293b;
+    color: #091008;
 }
 
 .contact-item p {
-    color: #333;
+    color: #3E563E;
 }
 
 .contact-form {
@@ -1326,12 +1332,12 @@ top: 192px;
 .contact-form select:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #0b2b26;
+    border-color: #203023;
 }
 
 /* Footer */
 .footer {
-    background: #0b2b26;
+    background: #203023;
     color: #fff;
     padding: 40px 0 20px;
 }
@@ -1345,7 +1351,7 @@ top: 192px;
 
 .footer-section h4 {
     margin-bottom: 1rem;
-    color: #cbd5e1;
+    color: #CFDAE0;
 }
 
 .footer-section ul {
@@ -1357,17 +1363,17 @@ top: 192px;
 }
 
 .footer-section ul li a {
-    color: #cbd5e1;
+    color: #CFDAE0;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-    color: #0b2b26;
+    color: #203023;
 }
 
 .footer-section p {
-    color: #cbd5e1;
+    color: #CFDAE0;
     margin-bottom: 0.5rem;
 }
 
@@ -1382,20 +1388,20 @@ top: 192px;
 }
 
 .social-links a {
-    color: #cbd5e1;
+    color: #CFDAE0;
     font-size: 1.5rem;
     transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #0b2b26;
+    color: #203023;
 }
 
 .footer-bottom {
     border-top: 1px solid #334155;
     padding-top: 1rem;
     text-align: center;
-    color: #cbd5e1;
+    color: #CFDAE0;
 }
 
 /* Responsive Design */
@@ -1415,7 +1421,7 @@ top: 192px;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0,0,0,0.05);
         padding: 2rem 0;
-        border-top: 3px solid #0b2b26;
+        border-top: 3px solid #203023;
     }
     
     .nav-menu.active {
@@ -1468,7 +1474,7 @@ top: 192px;
     .service-detail:nth-child(even) {
         grid-template-columns: 1fr;
         border-right: none;
-        border-left: 5px solid #0b2b26;
+        border-left: 5px solid #203023;
     }
     
     .service-detail:nth-child(even) .service-content,
@@ -1586,7 +1592,7 @@ html {
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
-    outline: 2px solid #0b2b26;
+    outline: 2px solid #203023;
     outline-offset: 2px;
 } */
 
@@ -1597,7 +1603,7 @@ html {
     height: 20px;
     border: 3px solid rgba(37, 99, 235, 0.3);
     border-radius: 50%;
-    border-top-color: #0b2b26;
+    border-top-color: #203023;
     animation: spin 1s ease-in-out infinite;
 }
 
