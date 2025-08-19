@@ -202,18 +202,18 @@ document.addEventListener('DOMContentLoaded', () => {
         testimonials[currentTestimonial].classList.add('active'); // first card active
 
         setInterval(() => {
-            // reset current
+            // remove active from current
             testimonials[currentTestimonial].classList.remove('active');
             
-            // move to next
+            // go to next
             currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            
+            // add active to new
             testimonials[currentTestimonial].classList.add('active');
-            testimonials[currentTestimonial].style.opacity = '0.7';
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            testimonials[currentTestimonial].style.opacity = '1';
         }, 5000);
     }
 });
+
 
 
 // Process steps animation

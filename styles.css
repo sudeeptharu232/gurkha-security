@@ -48,6 +48,7 @@ body {
     align-items: center;
     font-size: 1.5rem;
     font-weight: bold;
+    font-family: 'Orbitron';
     color: #203023;
 }
 
@@ -272,12 +273,14 @@ top: 192px;
 .btn-secondary {
     background: transparent;
     color: #203023;
-    border: 2px solid #203023;
+    border: 2px solid #94A98A;
 }
 
 .btn-secondary:hover {
     background: #203023;
     color: #fff;
+    border: 2px solid #203023;
+
 }
 
 /* Features Section */
@@ -490,7 +493,7 @@ top: 192px;
 .service-detail:nth-child(even) {
     grid-template-columns: auto 1fr;
     border-left: none;
-    border-right: 5px solid #203023;
+    border-right: 5px solid #94A98A;
 }
 
 .service-detail:nth-child(even) .service-content {
@@ -729,7 +732,7 @@ top: 192px;
     gap: 2rem;
 }
 .story-stats img {
-    width: 380px;      
+    width: 303px;      
     height: auto;       
     /* border-radius: 8px;  */
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
@@ -1521,7 +1524,7 @@ top: 192px;
     .service-detail:nth-child(even) {
         grid-template-columns: 1fr;
         border-right: none;
-        border-left: 5px solid #203023;
+        border-left: 5px solid #94A98A;
     }
     
     .service-detail:nth-child(even) .service-content,
