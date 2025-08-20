@@ -178,6 +178,7 @@ top: 192px;
     font-size: 1.2rem;
     margin-bottom: 2rem;
     color: #3E563E;
+    position: relative;
 }
 
 .hero-buttons {
@@ -1487,13 +1488,17 @@ top: 192px;
         text-align: center;
         gap: 2rem;
     }
-    
+    .hero2-background, .hero3-background {
+    background-size: 751px 751px;
+        top: 175;
+    }
     .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 4rem;
+        position: relative;
     }
     
     .hero-image i {
-        font-size: 8rem;
+        font-size: 10rem;
     }
     
     .trust-content {
@@ -1524,14 +1529,19 @@ top: 192px;
     .service-detail:nth-child(even) {
         grid-template-columns: 1fr;
         border-right: none;
-        border-left: 5px solid #94A98A;
+        border-right: 5px solid #94A98A;
     }
     
     .service-detail:nth-child(even) .service-content,
     .service-detail:nth-child(even) .service-icon {
         order: initial;
     }
-    
+    .service-icon{
+        order: 2;
+    }
+    .service-detail{
+        order:1;
+    }
     .story-grid,
     .training-content,
     .community-content,
@@ -1544,6 +1554,11 @@ top: 192px;
     .story-stats,
     .career-benefits {
         grid-template-columns: 1fr;
+        display: flex;
+        justify-content: center;
+    }
+    .story-stats img{
+        width: 406px;
     }
     
     .contact-content {
@@ -1576,21 +1591,54 @@ top: 192px;
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
+    .service-icon img{
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
     .container {
         padding: 0 15px;
     }
-    
+    .hero2-background,.hero3-background{
+
+        background-size: 420px 420px;
+    }
+
+        .story-stats img {
+            width: 345px;
+        }
     .hero-text h1 {
+        font-size: 3.5rem;
+        line-height: normal;
+        position: relative;
+    }
+     .story-stats,
+    .career-benefits {
+        grid-template-columns: 1fr;
+        display: block;
+        justify-content: center;
+    }
+    .page-hero h1 {
+        font-size: 3rem;
+    }
+    .story-text h2 {
         font-size: 2rem;
     }
     
-    .page-hero h1 {
-        font-size: 1.8rem;
+    .organizational-structure h2{
+        font-size: 2rem;
     }
-    
+    .career-text p{
+        text-align: justify;
+
+    }
+    .bio{
+        text-align: justify;
+    }
+    .career-opportunities h2{
+        font-size: 2rem;
+    }
     .features h2,
     .services-preview h2,
     .stats-section h2,
@@ -1601,9 +1649,14 @@ top: 192px;
     .advisory-board h2 {
         font-size: 2rem;
     }
-    
+    .contact h2{
+        font-size: 2rem;
+    }
+    .service-process h2{
+        font-size: 2rem;
+    }
     .hero-image i {
-        font-size: 6rem;
+        font-size: 10rem;
     }
     
     .service-icon i {

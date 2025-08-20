@@ -197,7 +197,8 @@ document.querySelectorAll('img').forEach(img => {
 document.addEventListener('DOMContentLoaded', () => {
     const testimonials = document.querySelectorAll('.testimonial-card');
     let currentTestimonial = 0;
-    
+    if(window.innerWidth >480){
+
     if (testimonials.length > 0) {
         testimonials[currentTestimonial].classList.add('active'); // first card active
 
@@ -206,12 +207,14 @@ document.addEventListener('DOMContentLoaded', () => {
             testimonials[currentTestimonial].classList.remove('active');
             
             // go to next
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            currentTestimonial = (currentTestimonial + 0.5) % testimonials.length;
             
             // add active to new
             testimonials[currentTestimonial].classList.add('active');
         }, 5000);
     }
+    }
+
 });
 
 
